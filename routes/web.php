@@ -1,5 +1,6 @@
 <?php
 
-//Route::view('/', 'welcome')->name('site.index');
-
-Route::get('/url-ninyo', function() {});
+Route::view('/', 'sample');
+Route::post("check-form", function(\Illuminate\Http\Request $request) {
+    dd($request->post());
+})->name('post-form');
